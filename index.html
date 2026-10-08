@@ -91,10 +91,6 @@ section{padding:120px 0}
 .hero h1 em{font-style:normal;color:var(--glow)}
 .hero-copy{text-shadow:0 1px 12px rgba(8,12,20,.6)}
 .hero-row{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:32px;margin-top:36px}
-.tourbar{display:inline-flex;align-items:center;gap:12px;padding:6px 18px 6px 6px;border-radius:999px;background:rgba(14,18,28,.45);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.16);margin-bottom:26px;font-weight:600;font-size:.95rem}
-.tourbar button{width:36px;height:36px;border-radius:50%;border:0;background:#fff;color:var(--ink);display:grid;place-items:center;cursor:pointer;flex:none}
-.tourbar .scene{min-width:12ch;transition:opacity .4s}
-.tourbar .count{opacity:.65;font-weight:500;font-variant-numeric:tabular-nums}
 .segs{position:absolute;left:0;right:0;bottom:0;z-index:3;display:flex;gap:4px;padding:0 28px 18px;max-width:var(--wrap);margin:0 auto}
 .segs button{all:unset;flex:1;height:14px;cursor:pointer;display:flex;align-items:center}
 .segs button i{display:block;width:100%;height:3px;border-radius:3px;background:rgba(255,255,255,.28);overflow:hidden;position:relative}
@@ -276,21 +272,6 @@ footer a:hover{color:#fff}
   footer{padding-bottom:120px}
 }
 
-.pv-btn{position:fixed;right:20px;bottom:20px;z-index:70;display:flex;align-items:center;gap:8px;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:13px 18px;font-weight:600;font-size:.92rem;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.3)}
-.pv-btn:hover{background:var(--hemlock)}
-.in-frame .pv-btn{display:none}
-.pvw{position:fixed;inset:0;z-index:80;background:rgba(14,18,28,.82);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;gap:48px;padding:24px}
-.pvw.open{display:flex}
-.handset{position:relative;width:414px;height:min(860px,calc(100vh - 48px));background:#0d0f14;border-radius:56px;padding:12px;box-shadow:0 0 0 2px #3a3f4a,0 40px 100px rgba(0,0,0,.5);flex:none}
-.handset iframe{width:390px;height:100%;border:0;border-radius:44px;background:var(--mist);display:block}
-.pv-x{display:none;position:absolute;top:14px;right:14px;z-index:3;width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.16);color:#fff;font-size:1.1rem;cursor:pointer}
-.pv-side{color:#fff;max-width:280px}
-.pv-side h2{font-size:2.2rem;margin-bottom:12px}
-.pv-side p{color:rgba(255,255,255,.8);font-size:1rem}
-.pv-side .btn{margin-top:8px}
-@media (max-width:800px){.pv-side{display:none}.pv-x{display:block}.handset{transform:scale(min(1,calc((100vw - 32px)/414px)));transform-origin:center}}
-@media (max-width:700px){.pv-btn{bottom:84px}}
-@media (max-width:480px){.pv-btn{display:none}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -317,13 +298,9 @@ footer a:hover{color:#fff}
 <main>
 <section class="hero" id="home" style="padding:0" aria-label="Welcome, with a photo fly-through of the community">
   <div class="reel" id="reel" aria-hidden="true">
-    <video id="flyVid" autoplay muted loop playsinline preload="auto" poster="assets/flyover-poster.webp"></video>
+    <video id="flyVid" src="assets/hero.mp4" autoplay muted loop playsinline preload="auto" poster="assets/img/poster.webp"></video>
   </div>
   <div class="wrap">
-    <div class="tourbar">
-      <button type="button" id="tourBtn" aria-label="Pause fly-through"><svg width="12" height="14" viewBox="0 0 12 14" aria-hidden="true"><g id="icoPause" fill="currentColor"><rect x="1" y="1" width="3.5" height="12" rx="1"/><rect x="7.5" y="1" width="3.5" height="12" rx="1"/></g><path id="icoPlay" d="M2 1.2v11.6L11.5 7z" fill="currentColor" style="display:none"/></svg></button>
-      <span class="scene" id="scene">Clubhouse fly-in</span>
-    </div>
     <h1>Life is more fun <span class="nb">at Portage&nbsp;Pointe.</span></h1>
     <div class="hero-row">
       <div class="hero-copy">
@@ -346,8 +323,8 @@ footer a:hover{color:#fff}
 <section class="welcome" id="welcome">
   <div class="wrap welcome-grid">
     <div class="duo">
-      <figure class="a"><img data-k="pool" src="assets/pool.webp" alt="Swimming pool with lounge chairs and umbrellas beside three-story apartment buildings" loading="lazy"></figure>
-      <figure class="b"><img data-k="club" src="assets/club.webp" alt="Clubhouse and leasing office entrance with landscaped beds" loading="lazy"></figure>
+      <figure class="a"><img data-k="pool" src="assets/img/pool.webp" alt="Swimming pool with lounge chairs and umbrellas beside three-story apartment buildings" loading="lazy"></figure>
+      <figure class="b"><img data-k="club" src="assets/img/club.webp" alt="Clubhouse and leasing office entrance with landscaped beds" loading="lazy"></figure>
     </div>
     <div>
       <h2>Room to breathe, minutes from everything</h2>
@@ -406,33 +383,33 @@ footer a:hover{color:#fff}
       </div>
     </div>
     <div class="grid" id="grid">
-      <button class="w8" data-c="evening"><img data-k="eve_bldg" src="assets/eve_bldg.webp" alt="Two-story building at twilight with warm lit windows" loading="lazy"><figcaption>Evening at Portage Pointe</figcaption></button>
-      <button class="w4" data-c="grounds"><img data-k="sign" src="assets/sign.webp" alt="Portage Pointe Apartment Homes entrance sign surrounded by evergreens" loading="lazy"><figcaption>Front entrance</figcaption></button>
-      <button class="w4" data-c="amenities"><img data-k="gym" src="assets/gym.webp" alt="Fitness center with treadmills and ellipticals" loading="lazy"><figcaption>Fitness center</figcaption></button>
-      <button class="w4" data-c="inside"><img data-k="kitchen" src="assets/kitchen.webp" alt="Galley kitchen with granite counters and wood cabinets" loading="lazy"><figcaption>Kitchen</figcaption></button>
-      <button class="w4" data-c="amenities"><img data-k="garden" src="assets/garden.webp" alt="Raised garden beds in a fenced community garden" loading="lazy"><figcaption>Community garden</figcaption></button>
-      <button class="w6" data-c="amenities"><img data-k="lounge" src="assets/lounge.webp" alt="Pool deck lounge chairs beside flowering shrubs" loading="lazy"><figcaption>Pool deck</figcaption></button>
-      <button class="w6" data-c="evening"><img data-k="eve_steps" src="assets/eve_steps.webp" alt="Landscaped steps leading to the clubhouse at sunset" loading="lazy"><figcaption>Clubhouse at sunset</figcaption></button>
-      <button class="w3" data-c="grounds"><img data-k="flag" src="assets/flag.webp" alt="Entry circle with flagpole in front of apartment buildings" loading="lazy"><figcaption>Grounds</figcaption></button>
-      <button class="w3" data-c="amenities"><img data-k="pavilion" src="assets/pavilion.webp" alt="Covered picnic pavilion with tables" loading="lazy"><figcaption>Picnic pavilion</figcaption></button>
-      <button class="w3" data-c="inside"><img data-k="bed" src="assets/bed.webp" alt="Bedroom styled with green bedding and natural wood" loading="lazy"><figcaption>Bedroom</figcaption></button>
-      <button class="w3" data-c="amenities"><img data-k="play" src="assets/play.webp" alt="Playground with slides" loading="lazy"><figcaption>Playground</figcaption></button>
-      <button class="w4" data-c="grounds"><img data-k="bldg" src="assets/bldg.webp" alt="Three-story apartment building with balconies and lawn" loading="lazy"><figcaption>Balconies</figcaption></button>
-      <button class="w4" data-c="inside"><img data-k="biz" src="assets/biz.webp" alt="Business center workstations" loading="lazy"><figcaption>Business center</figcaption></button>
-      <button class="w4" data-c="evening"><img data-k="eve_club" src="assets/eve_club.webp" alt="Clubhouse leasing office sign at dusk" loading="lazy"><figcaption>Leasing office</figcaption></button>
-      <button class="w6" data-c="amenities"><img data-k="gazebo" src="assets/gazebo.webp" alt="Gazebo on a wide green lawn" loading="lazy"><figcaption>Gazebo lawn</figcaption></button>
-      <button class="w6" data-c="evening"><img data-k="sunset" src="assets/sunset.webp" alt="Orange sunset over apartment buildings and pine trees" loading="lazy"><figcaption>Sunset</figcaption></button>
-      <button class="w3" data-c="amenities"><img data-k="hoop" src="assets/hoop.webp" alt="Outdoor basketball court surrounded by trees" loading="lazy"><figcaption>Basketball court</figcaption></button>
-      <button class="w3" data-c="grounds"><img data-k="walk" src="assets/walk.webp" alt="Two-story brick and siding building with front walkway" loading="lazy"><figcaption>Walk-up buildings</figcaption></button>
-      <button class="w3" data-c="inside"><img data-k="laundry" src="assets/laundry.webp" alt="Laundry room with washer and dryer" loading="lazy"><figcaption>Laundry</figcaption></button>
-      <button class="w3" data-c="grounds"><img data-k="garage" src="assets/garage.webp" alt="Row of detached garages" loading="lazy"><figcaption>Garages</figcaption></button>
+      <button class="w8" data-c="evening"><img data-k="eve_bldg" src="assets/img/eve_bldg.webp" alt="Two-story building at twilight with warm lit windows" loading="lazy"><figcaption>Evening at Portage Pointe</figcaption></button>
+      <button class="w4" data-c="grounds"><img data-k="sign" src="assets/img/sign.webp" alt="Portage Pointe Apartment Homes entrance sign surrounded by evergreens" loading="lazy"><figcaption>Front entrance</figcaption></button>
+      <button class="w4" data-c="amenities"><img data-k="gym" src="assets/img/gym.webp" alt="Fitness center with treadmills and ellipticals" loading="lazy"><figcaption>Fitness center</figcaption></button>
+      <button class="w4" data-c="inside"><img data-k="kitchen" src="assets/img/kitchen.webp" alt="Galley kitchen with granite counters and wood cabinets" loading="lazy"><figcaption>Kitchen</figcaption></button>
+      <button class="w4" data-c="amenities"><img data-k="garden" src="assets/img/garden.webp" alt="Raised garden beds in a fenced community garden" loading="lazy"><figcaption>Community garden</figcaption></button>
+      <button class="w6" data-c="amenities"><img data-k="lounge" src="assets/img/lounge.webp" alt="Pool deck lounge chairs beside flowering shrubs" loading="lazy"><figcaption>Pool deck</figcaption></button>
+      <button class="w6" data-c="evening"><img data-k="eve_steps" src="assets/img/eve_steps.webp" alt="Landscaped steps leading to the clubhouse at sunset" loading="lazy"><figcaption>Clubhouse at sunset</figcaption></button>
+      <button class="w3" data-c="grounds"><img data-k="flag" src="assets/img/flag.webp" alt="Entry circle with flagpole in front of apartment buildings" loading="lazy"><figcaption>Grounds</figcaption></button>
+      <button class="w3" data-c="amenities"><img data-k="pavilion" src="assets/img/pavilion.webp" alt="Covered picnic pavilion with tables" loading="lazy"><figcaption>Picnic pavilion</figcaption></button>
+      <button class="w3" data-c="inside"><img data-k="bed" src="assets/img/bed.webp" alt="Bedroom styled with green bedding and natural wood" loading="lazy"><figcaption>Bedroom</figcaption></button>
+      <button class="w3" data-c="amenities"><img data-k="play" src="assets/img/play.webp" alt="Playground with slides" loading="lazy"><figcaption>Playground</figcaption></button>
+      <button class="w4" data-c="grounds"><img data-k="bldg" src="assets/img/bldg.webp" alt="Three-story apartment building with balconies and lawn" loading="lazy"><figcaption>Balconies</figcaption></button>
+      <button class="w4" data-c="inside"><img data-k="biz" src="assets/img/biz.webp" alt="Business center workstations" loading="lazy"><figcaption>Business center</figcaption></button>
+      <button class="w4" data-c="evening"><img data-k="eve_club" src="assets/img/eve_club.webp" alt="Clubhouse leasing office sign at dusk" loading="lazy"><figcaption>Leasing office</figcaption></button>
+      <button class="w6" data-c="amenities"><img data-k="gazebo" src="assets/img/gazebo.webp" alt="Gazebo on a wide green lawn" loading="lazy"><figcaption>Gazebo lawn</figcaption></button>
+      <button class="w6" data-c="evening"><img data-k="sunset" src="assets/img/sunset.webp" alt="Orange sunset over apartment buildings and pine trees" loading="lazy"><figcaption>Sunset</figcaption></button>
+      <button class="w3" data-c="amenities"><img data-k="hoop" src="assets/img/hoop.webp" alt="Outdoor basketball court surrounded by trees" loading="lazy"><figcaption>Basketball court</figcaption></button>
+      <button class="w3" data-c="grounds"><img data-k="walk" src="assets/img/walk.webp" alt="Two-story brick and siding building with front walkway" loading="lazy"><figcaption>Walk-up buildings</figcaption></button>
+      <button class="w3" data-c="inside"><img data-k="laundry" src="assets/img/laundry.webp" alt="Laundry room with washer and dryer" loading="lazy"><figcaption>Laundry</figcaption></button>
+      <button class="w3" data-c="grounds"><img data-k="garage" src="assets/img/garage.webp" alt="Row of detached garages" loading="lazy"><figcaption>Garages</figcaption></button>
     </div>
   </div>
 </section>
 
 <section id="amenities">
   <div class="wrap amen-grid">
-    <figure class="amen-photo" style="margin:0"><img id="amImg" data-k="pool" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-dup="pool" alt="Swimming pool"><figcaption id="amCap">Swimming pool</figcaption></figure>
+    <figure class="amen-photo" style="margin:0"><img id="amImg" data-k="pool" src="assets/img/pool.webp" alt="Swimming pool"><figcaption id="amCap">Swimming pool</figcaption></figure>
     <div>
       <h2 style="margin-bottom:22px">Everything you'd leave home for, right here</h2>
       <p class="lede" style="margin-bottom:40px">Swim, train, garden or get some work done without getting in the car. Tap any amenity to see it.</p>
@@ -440,7 +417,7 @@ footer a:hover{color:#fff}
         <h3>Around the community</h3>
         <ul>
           <li><button class="on" data-img="pool">Swimming pool and sundeck<span class="dot"></span></button></li>
-          <li><button data-img="hero_in">Clubhouse<span class="dot"></span></button></li>
+          <li><button data-img="club">Clubhouse<span class="dot"></span></button></li>
           <li><button data-img="gym">Fitness center<span class="dot"></span></button></li>
           <li><button data-img="biz">Business center<span class="dot"></span></button></li>
           <li><button data-img="garden">Community garden<span class="dot"></span></button></li>
@@ -465,7 +442,7 @@ footer a:hover{color:#fff}
 </section>
 
 <section class="band" id="pets">
-  <img data-k="lawn" src="assets/lawn.webp" alt="" loading="lazy">
+  <img data-k="lawn" src="assets/img/lawn.webp" alt="" loading="lazy">
   <div class="wrap">
     <h2>Your dog will like it here too</h2>
     <p>Pets are welcome upon approval, with plenty of open lawn plus a fenced bark park for off-leash time. Breed restrictions apply, so give us a call with any questions.</p>
@@ -509,7 +486,7 @@ footer a:hover{color:#fff}
 </section>
 
 <section class="tour" id="visit">
-  <img data-k="eve_club" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-dup="eve_club" alt="" loading="lazy">
+  <img data-k="eve_club" src="assets/img/eve_club.webp" alt="" loading="lazy">
   <div class="wrap">
     <div>
       <h2 style="margin-bottom:22px">Come see it in person</h2>
@@ -576,20 +553,13 @@ footer a:hover{color:#fff}
   <p id="lbCap"></p>
 </div>
 
-<script>document.querySelectorAll("img[data-dup]").forEach(i=>{const o=document.querySelector('img[data-k="'+i.dataset.dup+'"]:not([data-dup])');if(o)i.src=o.src});</script>
-<button class="pv-btn" id="pvBtn" aria-haspopup="dialog"><svg width="14" height="20" viewBox="0 0 14 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="1" y="1" width="12" height="18" rx="3"/><path d="M5.5 16h3"/></svg>Phone preview</button>
-<div class="pvw" id="pv" role="dialog" aria-modal="true" aria-label="Phone preview">
-  <button class="pv-x" id="pvX" aria-label="Close phone preview">✕</button>
-  <div class="handset"><iframe id="pvFrame" title="Site on a phone-sized screen"></iframe></div>
-  <div class="pv-side"><h2>On a phone</h2><p>This is the same page at iPhone width (390px). Scroll inside the phone, open the menu and try the floor plans.</p><button class="btn btn-glow" id="pvClose">Back to desktop</button></div>
-</div>
 <script>
 const IMG=new Proxy({},{get:(_,k)=>document.querySelector('img[data-k="'+k+'"]').src});
 const PLANS=[
- {name:"One bedroom",bd:1,ba:1,sq:820,rent:"$1,185–$1,215",avail:"3 available",wait:false,img:"assets/fp-1bed.webp"},
- {name:"Two bedroom, one bath",bd:2,ba:1,sq:1020,rent:"$1,285–$1,315",avail:"6 available",wait:false,img:"assets/fp-2bed-1bath.webp",feat:true},
- {name:"Two bedroom, two bath",bd:2,ba:2,sq:1150,rent:"Call for pricing",avail:"Waitlist",wait:true,img:"assets/fp-2bed-2bath.webp"},
- {name:"Three bedroom, two bath",bd:3,ba:2,sq:1255,rent:"Call for pricing",avail:"Waitlist",wait:true,img:"assets/fp-3bed-2bath.webp"}
+ {name:"One bedroom",bd:1,ba:1,sq:820,rent:"$1,185–$1,215",avail:"3 available",wait:false,img:"assets/img/fp1.webp"},
+ {name:"Two bedroom, one bath",bd:2,ba:1,sq:1020,rent:"$1,285–$1,315",avail:"6 available",wait:false,img:"assets/img/fp2.webp",feat:true},
+ {name:"Two bedroom, two bath",bd:2,ba:2,sq:1150,rent:"Call for pricing",avail:"Waitlist",wait:true,img:"assets/img/fp22.webp"},
+ {name:"Three bedroom, two bath",bd:3,ba:2,sq:1255,rent:"Call for pricing",avail:"Waitlist",wait:true,img:"assets/img/fp3.webp"}
 ];
 const $=s=>document.querySelector(s);
 
@@ -601,18 +571,17 @@ const mb=$('#menuBtn'),nav=$('#nav');
 mb.onclick=()=>{const o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o);mb.textContent=o?'Close':'Menu';if(o)hdr.classList.add('solid');else onScroll()};
 nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');mb.setAttribute('aria-expanded',false);mb.textContent='Menu'}));
 
-// hero video (single clip)
-const vid=$('#flyVid'),tourBtn=$('#tourBtn');
-const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-let playing=!reduce;
+// hero video
+const vid=$('#flyVid');
 vid.muted=true;vid.defaultMuted=true;
-vid.src='assets/flyover.mp4';
-function setPlaying(p){playing=p;$('#icoPause').style.display=p?'':'none';$('#icoPlay').style.display=p?'none':'';tourBtn.setAttribute('aria-label',(p?'Pause':'Play')+' video');p?vid.play().catch(()=>{}):vid.pause()}
-tourBtn.onclick=()=>setPlaying(!playing);
-vid.addEventListener('canplay',()=>{if(playing)vid.play().catch(()=>{})});
-// if autoplay is blocked, start on first interaction anywhere
-addEventListener('pointerdown',()=>{if(playing&&vid.paused)vid.play().catch(()=>{})},{once:true});
-setPlaying(playing);
+const vd=document.getElementById('vidData');
+if(vd){const b64=vd.textContent.trim();
+  try{const bin=atob(b64);const u=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)u[i]=bin.charCodeAt(i);
+    vid.src=URL.createObjectURL(new Blob([u],{type:'video/mp4'}));
+    vid.addEventListener('error',()=>{if(!vid.dataset.fb){vid.dataset.fb=1;vid.src='data:video/mp4;base64,'+b64}});
+  }catch(e){vid.src='data:video/mp4;base64,'+b64}}
+if(matchMedia('(prefers-reduced-motion: reduce)').matches){vid.removeAttribute('autoplay');vid.pause()}
+else{const go=()=>vid.play().catch(()=>{});vid.addEventListener('canplay',go);go();addEventListener('pointerdown',()=>{if(vid.paused)go()},{once:true})}
 
 // floor plans
 const list=$('#fpList'),fpImg=$('#fpImg');let cur=-1;
@@ -664,13 +633,6 @@ $('#tourForm').addEventListener('submit',e=>{e.preventDefault();
  $('#dn').textContent=$('#fn').value.trim().split(' ')[0];const dn=$('#done');dn.style.display='block';dn.focus();
  const b=e.target.querySelector('[type=submit]');b.textContent='Tour requested';b.disabled=true});
 
-// phone preview
-
-const pv=$('#pv'),pvF=$('#pvFrame');let pvLoaded=false;
-function openPv(){if(!pvLoaded){const doc=document.documentElement.cloneNode(true);doc.querySelectorAll('.pvw,.pv-btn').forEach(e=>e.remove());doc.querySelectorAll('.lb.open').forEach(e=>e.classList.remove('open'));doc.setAttribute('class','in-frame');doc.querySelector('body').removeAttribute('style');doc.querySelector('#top').classList.remove('solid');doc.querySelector('#nav').classList.remove('open');doc.querySelector('#flyVid').removeAttribute('src');pvF.srcdoc='<!doctype html>'+doc.outerHTML;pvLoaded=true}pv.classList.add('open');document.body.style.overflow='hidden';$('#pvClose').focus()}
-function closePv(){pv.classList.remove('open');document.body.style.overflow='';$('#pvBtn').focus()}
-if(pv){$('#pvBtn').onclick=openPv;$('#pvClose').onclick=closePv;$('#pvX').onclick=closePv;pv.onclick=e=>{if(e.target===pv)closePv()}}
-addEventListener('keydown',e=>{if(pv&&e.key==='Escape'&&pv.classList.contains('open'))closePv()});
 </script>
 </body>
 </html>
