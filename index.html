@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portage Pointe Apartments | Streetsboro, OH</title>
+<meta name="description" content="One, two and three-bedroom apartments in Streetsboro, Ohio. Pool, clubhouse, fitness center, community garden and a bark park. Pets welcome.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mist:#EEF1EE;
+  --white:#FBFCFB;
+  --ink:#1D2824;
+  --hemlock:#234237;
+  --hemlock-2:#2F5748;
+  --shale:#5A6660;
+  --siding:#8E9BA5;
+  --glow:#E9B66B;
+  --glow-2:#D9A04F;
+  --dusk:#2B3346;
+  --line:#D3DAD5;
+  --display:"Gloock", Georgia, serif;
+  --body:"Figtree", system-ui, sans-serif;
+  --wrap:1240px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--mist);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--glow);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+@media (max-width:600px){.wrap{padding:0 16px}}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.04;margin:0;letter-spacing:-.012em}
+h2{font-size:clamp(2.3rem,5vw,4rem)}
+h3{font-size:1.55rem}
+p{margin:0 0 1em;max-width:60ch}
+.lede{font-size:1.14rem;color:var(--shale)}
+section{padding:120px 0}
+@media (max-width:760px){section{padding:76px 0}}
+.head{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:end;margin-bottom:56px}
+.head p{margin:0}
+@media (max-width:860px){.head{grid-template-columns:1fr;gap:18px;margin-bottom:36px}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font:600 1rem/1 var(--body);padding:17px 26px;border-radius:999px;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s,transform .2s}
+.btn:active{transform:scale(.98)}
+.btn-glow{background:var(--glow);color:var(--ink)}
+.btn-glow:hover{background:var(--glow-2)}
+.btn-ghost{border-color:rgba(255,255,255,.6);color:#fff;background:rgba(255,255,255,.06);backdrop-filter:blur(6px)}
+.btn-ghost:hover{background:rgba(255,255,255,.18)}
+.btn-dark{background:var(--hemlock);color:var(--white)}
+.btn-dark:hover{background:var(--hemlock-2)}
+.btn-line{border-color:var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--white)}
+
+/* ---------- header ---------- */
+.top{position:fixed;inset:0 0 auto 0;z-index:40;color:#fff;transition:background .35s,color .35s,box-shadow .35s}
+.top.solid{background:rgba(251,252,251,.94);color:var(--ink);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.top .wrap{display:flex;align-items:center;gap:28px;height:78px}
+.brand{display:flex;flex-direction:column;text-decoration:none;line-height:1}
+.brand b{font:400 1.5rem var(--display);letter-spacing:-.01em}
+.brand small{font-size:.74rem;opacity:.75;margin-top:4px;letter-spacing:.02em}
+.nav{display:flex;gap:26px;margin-left:auto;font-weight:500;font-size:.95rem}
+.nav a{text-decoration:none;opacity:.86}
+.nav a:hover{opacity:1}
+.top .phone{font-weight:600;text-decoration:none;font-size:.95rem}
+.top .btn{padding:13px 20px;font-size:.92rem}
+.menu-btn{display:none;margin-left:auto;background:none;border:1.5px solid currentColor;border-radius:999px;padding:9px 18px;font-weight:600;font-size:.9rem;cursor:pointer}
+@media (max-width:1040px){
+  .nav,.top .phone{display:none}
+  .menu-btn{display:block}
+  .nav.open{display:flex;flex-direction:column;position:absolute;top:78px;left:0;right:0;background:var(--white);color:var(--ink);padding:22px 24px 30px;gap:18px;font-size:1.15rem;box-shadow:0 20px 40px rgba(29,40,36,.12)}
+}
+@media (max-width:520px){.top .btn{display:none}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;color:#fff;overflow:hidden;background:var(--dusk);display:flex;align-items:flex-end}
+.hero .ph{position:absolute;inset:0;transition:opacity 1s var(--ease)}
+.hero .ph img{width:100%;height:100%;object-fit:cover}
+.reel{position:absolute;inset:0;overflow:hidden;background:var(--dusk)}
+.reel video{width:100%;height:100%;object-fit:cover;display:block}
+.hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(12,16,26,.7) 0%,rgba(12,16,26,.1) 20%,rgba(12,16,26,.4) 50%,rgba(12,16,26,.9) 100%),linear-gradient(90deg,rgba(12,16,26,.78) 0%,rgba(12,16,26,.45) 50%,rgba(12,16,26,.12) 85%),rgba(12,16,26,.18);pointer-events:none}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-bottom:56px;padding-top:140px}
+.hero h1{font-size:clamp(2.55rem,8.2vw,7.6rem);line-height:.95;letter-spacing:-.02em;max-width:12ch;color:#fff}
+.hero h1 .nb{white-space:nowrap}
+.hero h1{text-shadow:0 2px 4px rgba(8,12,20,.35),0 6px 40px rgba(8,12,20,.45)}
+.hero h1 em{font-style:normal;color:var(--glow)}
+.hero-copy{text-shadow:0 1px 12px rgba(8,12,20,.6)}
+.hero-row{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:32px;margin-top:36px}
+.tourbar{display:inline-flex;align-items:center;gap:12px;padding:6px 18px 6px 6px;border-radius:999px;background:rgba(14,18,28,.45);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.16);margin-bottom:26px;font-weight:600;font-size:.95rem}
+.tourbar button{width:36px;height:36px;border-radius:50%;border:0;background:#fff;color:var(--ink);display:grid;place-items:center;cursor:pointer;flex:none}
+.tourbar .scene{min-width:12ch;transition:opacity .4s}
+.tourbar .count{opacity:.65;font-weight:500;font-variant-numeric:tabular-nums}
+.segs{position:absolute;left:0;right:0;bottom:0;z-index:3;display:flex;gap:4px;padding:0 28px 18px;max-width:var(--wrap);margin:0 auto}
+.segs button{all:unset;flex:1;height:14px;cursor:pointer;display:flex;align-items:center}
+.segs button i{display:block;width:100%;height:3px;border-radius:3px;background:rgba(255,255,255,.28);overflow:hidden;position:relative}
+.segs button i b{position:absolute;inset:0;background:#fff;transform-origin:left;transform:scaleX(0)}
+.segs button:focus-visible i{outline:2px solid var(--glow);outline-offset:4px}
+@media (max-width:600px){.segs{padding:0 16px 12px}}
+.hero-copy{max-width:470px;font-size:1.12rem;color:#fff}
+.hero-copy p{margin:0 0 22px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.glance{display:grid;grid-template-columns:repeat(2,auto);gap:4px 36px;background:rgba(14,18,28,.62);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.18);border-radius:18px;padding:22px 26px}
+.glance div{padding:6px 0}
+.glance b{display:block;font:400 1.6rem/1.1 var(--display)}
+.glance span{font-size:.88rem;color:rgba(255,255,255,.85)}
+@media (max-width:760px){.glance{grid-template-columns:1fr 1fr;width:100%;gap:2px 20px;padding:16px 18px}.glance b{font-size:1.3rem}}
+.credit{position:absolute;right:28px;top:96px;z-index:2;font-size:.8rem;color:rgba(255,255,255,.75)}
+
+/* ---------- welcome ---------- */
+.welcome{background:var(--white)}
+.welcome-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.welcome h2{margin-bottom:26px}
+.duo{position:relative;height:620px}
+.duo figure{margin:0;position:absolute;overflow:hidden;border-radius:14px}
+.duo figure img{width:100%;height:100%;object-fit:cover}
+.duo .a{inset:0 22% 18% 0}
+.duo .b{inset:46% 0 0 38%;border:8px solid var(--white)}
+.checks{list-style:none;padding:0;margin:30px 0 34px;display:grid;grid-template-columns:1fr 1fr;gap:12px 24px}
+.checks li{display:flex;gap:10px;align-items:flex-start;font-weight:500}
+.checks svg{flex:none;margin-top:4px}
+@media (max-width:900px){.welcome-grid{grid-template-columns:1fr;gap:48px}.duo{height:440px}}
+@media (max-width:520px){.checks{grid-template-columns:1fr}.duo{height:340px}}
+
+/* ---------- floor plans ---------- */
+.plans{background:var(--mist)}
+.fp{display:grid;grid-template-columns:360px 1fr;gap:28px;align-items:stretch}
+.fp-list{display:flex;flex-direction:column;gap:10px}
+.fp-tab{all:unset;cursor:pointer;display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:20px 22px;border-radius:14px;background:var(--white);border:1.5px solid transparent;transition:border-color .2s,background .2s}
+.fp-tab:hover{border-color:var(--line)}
+.fp-tab:focus-visible{outline:3px solid var(--glow);outline-offset:2px}
+.fp-tab[aria-selected="true"]{background:var(--hemlock);color:var(--white)}
+.fp-tab .nm{font:400 1.35rem/1.15 var(--display)}
+.fp-tab .rent{font-weight:600;text-align:right;align-self:center}
+.fp-tab .sub{font-size:.9rem;opacity:.72}
+.fp-tab .tag{font-size:.82rem;font-weight:600;text-align:right;align-self:center;color:var(--hemlock-2)}
+.fp-tab[aria-selected="true"] .tag{color:var(--glow)}
+.fp-stage{position:relative;background:var(--white);border-radius:22px;padding:34px;display:grid;grid-template-rows:auto 1fr auto;min-height:640px;overflow:hidden}
+.fp-stage::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--mist) 1px,transparent 1px),linear-gradient(90deg,var(--mist) 1px,transparent 1px);background-size:32px 32px;opacity:.7;pointer-events:none}
+.fp-stage>*{position:relative}
+.fp-top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap}
+.fp-top h3{font-size:clamp(1.8rem,3vw,2.5rem)}
+.fp-top .avail{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.92rem;background:var(--mist);padding:8px 14px;border-radius:999px}
+.fp-top .avail i{width:8px;height:8px;border-radius:50%;background:#3E9B6B}
+.fp-top .avail.wait i{background:var(--glow-2)}
+.fp-img{display:grid;place-items:center;padding:10px 0}
+.fp-img img{max-height:440px;width:auto;filter:drop-shadow(0 30px 30px rgba(29,40,36,.18));transition:opacity .35s var(--ease),transform .5s var(--ease)}
+.fp-img img.swap{opacity:0;transform:translateY(14px) scale(.97)}
+.fp-specs{display:grid;grid-template-columns:repeat(4,1fr) auto;gap:20px;align-items:end;border-top:1px solid var(--line);padding-top:22px}
+.fp-specs dt{font-size:.85rem;color:var(--shale)}
+.fp-specs dd{margin:0;font:400 1.55rem/1.15 var(--display)}
+.size{grid-column:1/-1;display:flex;align-items:center;gap:14px;font-size:.85rem;color:var(--shale)}
+.size .bar{flex:1;height:6px;background:var(--mist);border-radius:6px;overflow:hidden}
+.size .bar i{display:block;height:100%;background:var(--hemlock);border-radius:6px;transition:width .6s var(--ease)}
+.fp-note{font-size:.88rem;color:var(--shale);margin-top:18px}
+@media (max-width:980px){.fp{grid-template-columns:1fr}.fp-list{flex-direction:row;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x mandatory}.fp-tab{min-width:250px;scroll-snap-align:start}.fp-stage{min-height:0;padding:22px}.fp-specs{grid-template-columns:1fr 1fr}.fp-specs .btn{grid-column:1/-1}}
+
+/* ---------- gallery ---------- */
+.gallery{background:var(--white)}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filters button{border:1.5px solid var(--line);background:none;border-radius:999px;padding:10px 18px;font-weight:600;font-size:.93rem;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--white)}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:120px;gap:12px}
+.grid button{all:unset;cursor:zoom-in;position:relative;overflow:hidden;border-radius:12px;background:var(--mist)}
+.grid button:focus-visible{outline:3px solid var(--glow);outline-offset:3px}
+.grid img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.grid button:hover img{transform:scale(1.04)}
+.grid figcaption{position:absolute;left:12px;bottom:12px;background:rgba(251,252,251,.92);color:var(--ink);font-size:.84rem;font-weight:600;padding:6px 11px;border-radius:999px}
+.grid .w6{grid-column:span 6;grid-row:span 4}.grid .w4{grid-column:span 4;grid-row:span 3}.grid .w8{grid-column:span 8;grid-row:span 4}.grid .w3{grid-column:span 3;grid-row:span 2}
+.grid [hidden]{display:none}
+@media (max-width:760px){.grid{grid-template-columns:1fr 1fr;grid-auto-rows:140px}.grid .w6,.grid .w8{grid-column:span 2;grid-row:span 2}.grid .w4,.grid .w3{grid-column:span 1;grid-row:span 1}}
+.lb{position:fixed;inset:0;z-index:60;background:rgba(18,22,30,.94);display:none;align-items:center;justify-content:center;padding:60px 20px}
+.lb.open{display:flex}
+.lb img{max-height:82vh;max-width:min(1400px,100%);border-radius:8px}
+.lb p{position:absolute;bottom:22px;left:0;right:0;text-align:center;color:#fff;margin:0 auto}
+.lb button{position:absolute;background:rgba(255,255,255,.12);border:0;color:#fff;width:52px;height:52px;border-radius:50%;cursor:pointer;font-size:1.4rem;display:grid;place-items:center}
+.lb button:hover{background:rgba(255,255,255,.24)}
+.lb .x{top:20px;right:20px}.lb .pv{left:20px;top:50%;translate:0 -50%}.lb .nx{right:20px;top:50%;translate:0 -50%}
+
+/* ---------- amenities ---------- */
+.amen-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:64px;align-items:start}
+.amen-photo{position:sticky;top:110px;border-radius:20px;overflow:hidden;aspect-ratio:4/5}
+.amen-photo img{width:100%;height:100%;object-fit:cover;transition:opacity .45s}
+.amen-photo figcaption{position:absolute;left:18px;bottom:18px;background:var(--white);border-radius:999px;padding:8px 14px;font-weight:600;font-size:.9rem}
+.groups h3{font-size:1.35rem;margin:0 0 6px;padding-top:30px}
+.groups h3:first-child{padding-top:0}
+.groups ul{list-style:none;padding:0;margin:0}
+.groups li button{all:unset;box-sizing:border-box;width:100%;display:flex;justify-content:space-between;align-items:center;padding:15px 0;border-bottom:1px solid var(--line);cursor:pointer;font-size:1.06rem;font-weight:500}
+.groups li button:hover,.groups li button.on{color:var(--hemlock-2)}
+.groups li button .dot{width:10px;height:10px;border-radius:50%;border:1.5px solid var(--siding)}
+.groups li button.on .dot{background:var(--glow);border-color:var(--glow-2)}
+.groups li button:focus-visible{outline:3px solid var(--glow);outline-offset:2px}
+.groups li.plain{padding:15px 0;border-bottom:1px solid var(--line);font-size:1.06rem;font-weight:500}
+.groups small{display:block;color:var(--shale);font-size:.88rem;margin-top:12px}
+@media (max-width:900px){.amen-grid{grid-template-columns:1fr;gap:36px}.amen-photo{position:relative;top:0;aspect-ratio:4/3}}
+
+/* ---------- evening band ---------- */
+.band{position:relative;min-height:88vh;display:flex;align-items:center;color:#fff;overflow:hidden;padding:0}
+.band>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.band::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(22,26,38,.82) 0%,rgba(22,26,38,.35) 55%,rgba(22,26,38,0) 100%)}
+.band .wrap{position:relative;z-index:2;width:100%}
+.band h2{max-width:11ch;margin-bottom:24px}
+.band p{color:rgba(255,255,255,.88);font-size:1.12rem;max-width:44ch}
+.pet-list{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 0;padding:0;list-style:none}
+.pet-list li{border:1.5px solid rgba(255,255,255,.45);border-radius:999px;padding:9px 16px;font-weight:500;font-size:.95rem;background:rgba(255,255,255,.06);backdrop-filter:blur(6px)}
+
+/* ---------- neighborhood ---------- */
+.hood{background:var(--white)}
+.hood-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:center}
+.places{list-style:none;padding:0;margin:30px 0 0}
+.place{display:grid;grid-template-columns:40px 1fr;gap:16px;padding:20px 0;border-top:1px solid var(--line)}
+.place:last-child{border-bottom:1px solid var(--line)}
+.place .k{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:.85rem;color:#fff;background:var(--hemlock);transition:background .2s,color .2s}
+.place.on .k{background:var(--glow);color:var(--ink)}
+.place h3{font-size:1.3rem;margin-bottom:2px}
+.place p{margin:0;color:var(--shale);font-size:.97rem}
+.map{border-radius:22px;overflow:hidden;background:var(--mist)}
+.pin{transition:transform .25s var(--ease);transform-box:fill-box;transform-origin:center}
+.pin.on{transform:scale(1.35)}
+@media (max-width:900px){.hood-grid{grid-template-columns:1fr;gap:40px}}
+
+/* ---------- tour ---------- */
+.tour{position:relative;color:#fff;overflow:hidden}
+.tour>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tour::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(16,21,30,.9) 0%,rgba(16,21,30,.78) 50%,rgba(16,21,30,.55) 100%)}
+.tour .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1.15fr;gap:64px;align-items:start}
+.tour .lede{color:rgba(255,255,255,.85)}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:40px}
+.info h3{font:600 .9rem var(--body);color:rgba(255,255,255,.7);margin-bottom:6px}
+.info a,.info address{font-style:normal;font:400 1.35rem/1.3 var(--display);text-decoration:none}
+.hours{list-style:none;padding:0;margin:0;font-size:1rem}
+.hours li{display:flex;justify-content:space-between;gap:16px;padding:3px 0;max-width:240px}
+.hours li.today{color:var(--glow);font-weight:600}
+form{background:var(--white);color:var(--ink);border-radius:22px;padding:36px;display:grid;grid-template-columns:1fr 1fr;gap:18px;box-shadow:0 40px 80px rgba(0,0,0,.3)}
+form h3{grid-column:1/-1;font-size:1.9rem}
+@media (max-width:600px){form{grid-template-columns:1fr;padding:22px}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full,fieldset{grid-column:1/-1}
+label,legend{font-weight:600;font-size:.9rem}
+input,select,textarea{font:inherit;font-size:1rem;padding:13px 14px;border:1.5px solid var(--line);border-radius:10px;background:var(--white);color:var(--ink);width:100%}
+input:focus,select:focus,textarea:focus{border-color:var(--hemlock);outline:none;box-shadow:0 0 0 3px rgba(35,66,55,.18)}
+fieldset{border:0;padding:0;margin:0}
+.seg{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.seg input{position:absolute;opacity:0;width:1px;height:1px}
+.seg label{border:1.5px solid var(--line);border-radius:999px;padding:10px 16px;cursor:pointer;font-weight:500}
+.seg input:checked+label{background:var(--hemlock);color:#fff;border-color:var(--hemlock)}
+.seg input:focus-visible+label{outline:3px solid var(--glow);outline-offset:2px}
+form .btn{grid-column:1/-1}
+.err{color:#A23B2A;font-size:.85rem;min-height:1em}
+.done{display:none;grid-column:1/-1;background:var(--mist);border-left:4px solid var(--hemlock);padding:18px 20px;border-radius:10px}
+.done h4{font:400 1.4rem var(--display);margin:0 0 4px}
+.done p{margin:0}
+@media (max-width:900px){.tour .wrap{grid-template-columns:1fr;gap:44px}}
+
+footer{background:var(--ink);color:rgba(251,252,251,.75);padding:80px 0 36px;font-size:.95rem}
+.f-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px}
+.f-brand{font:400 2.4rem/1 var(--display);color:#fff;margin-bottom:16px}
+footer h4{font:600 .95rem var(--body);color:#fff;margin:0 0 14px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+.legal{margin-top:60px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14);display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;font-size:.86rem}
+.legal span a{margin-left:18px}
+@media (max-width:820px){.f-grid{grid-template-columns:1fr 1fr}}
+
+.mbar{display:none}
+@media (max-width:700px){
+  .mbar{display:grid;grid-template-columns:1fr 1.4fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:var(--white);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .3s}
+  .mbar.show{transform:none}
+  .mbar .btn{padding:14px 10px}
+  .mbar .call{background:var(--mist)}
+  footer{padding-bottom:120px}
+}
+
+.pv-btn{position:fixed;right:20px;bottom:20px;z-index:70;display:flex;align-items:center;gap:8px;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:13px 18px;font-weight:600;font-size:.92rem;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+.pv-btn:hover{background:var(--hemlock)}
+.in-frame .pv-btn{display:none}
+.pvw{position:fixed;inset:0;z-index:80;background:rgba(14,18,28,.82);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;gap:48px;padding:24px}
+.pvw.open{display:flex}
+.handset{position:relative;width:414px;height:min(860px,calc(100vh - 48px));background:#0d0f14;border-radius:56px;padding:12px;box-shadow:0 0 0 2px #3a3f4a,0 40px 100px rgba(0,0,0,.5);flex:none}
+.handset iframe{width:390px;height:100%;border:0;border-radius:44px;background:var(--mist);display:block}
+.pv-x{display:none;position:absolute;top:14px;right:14px;z-index:3;width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.16);color:#fff;font-size:1.1rem;cursor:pointer}
+.pv-side{color:#fff;max-width:280px}
+.pv-side h2{font-size:2.2rem;margin-bottom:12px}
+.pv-side p{color:rgba(255,255,255,.8);font-size:1rem}
+.pv-side .btn{margin-top:8px}
+@media (max-width:800px){.pv-side{display:none}.pv-x{display:block}.handset{transform:scale(min(1,calc((100vw - 32px)/414px)));transform-origin:center}}
+@media (max-width:700px){.pv-btn{bottom:84px}}
+@media (max-width:480px){.pv-btn{display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#home"><b>Portage Pointe</b><small>Apartment homes in Streetsboro, Ohio</small></a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#floorplans">Floor plans</a>
+      <a href="#photos">Photos</a>
+      <a href="#amenities">Amenities</a>
+      <a href="#pets">Pets</a>
+      <a href="#neighborhood">Neighborhood</a>
+      <a href="#visit">Contact</a>
+      <a href="#">Residents</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <a class="phone" href="tel:+13306262388">330-626-2388</a>
+    <a class="btn btn-glow" href="#visit">Schedule a tour</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home" style="padding:0" aria-label="Welcome, with a photo fly-through of the community">
+  <div class="reel" id="reel" aria-hidden="true">
+    <video id="flyVid" autoplay muted loop playsinline preload="auto" poster="assets/flyover-poster.webp"></video>
+  </div>
+  <div class="wrap">
+    <div class="tourbar">
+      <button type="button" id="tourBtn" aria-label="Pause fly-through"><svg width="12" height="14" viewBox="0 0 12 14" aria-hidden="true"><g id="icoPause" fill="currentColor"><rect x="1" y="1" width="3.5" height="12" rx="1"/><rect x="7.5" y="1" width="3.5" height="12" rx="1"/></g><path id="icoPlay" d="M2 1.2v11.6L11.5 7z" fill="currentColor" style="display:none"/></svg></button>
+      <span class="scene" id="scene">Clubhouse fly-in</span>
+    </div>
+    <h1>Life is more fun <span class="nb">at Portage&nbsp;Pointe.</span></h1>
+    <div class="hero-row">
+      <div class="hero-copy">
+        <p>1 to 3-bedroom homes with a pool, clubhouse and plenty of green space.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-glow" href="#visit">Schedule a tour</a>
+          <a class="btn btn-ghost" href="#floorplans">See floor plans</a>
+        </div>
+      </div>
+      <div class="glance" aria-label="At a glance">
+        <div><b>$1,185</b><span>Starting rent</span></div>
+        <div><b>820–1,255</b><span>Square feet</span></div>
+        <div><b>$400</b><span>Security deposit</span></div>
+        <div><b>Pets</b><span>Welcome upon approval</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="welcome" id="welcome">
+  <div class="wrap welcome-grid">
+    <div class="duo">
+      <figure class="a"><img data-k="pool" src="assets/pool.webp" alt="Swimming pool with lounge chairs and umbrellas beside three-story apartment buildings" loading="lazy"></figure>
+      <figure class="b"><img data-k="club" src="assets/club.webp" alt="Clubhouse and leasing office entrance with landscaped beds" loading="lazy"></figure>
+    </div>
+    <div>
+      <h2>Room to breathe, minutes from everything</h2>
+      <p class="lede">Portage Pointe sits on green, tree-lined grounds with a pool, clubhouse and gardens, so home feels like a retreat. Shopping, dining and the highway are still just a few minutes away.</p>
+      <ul class="checks">
+        <li><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="9" fill="#234237"/><path d="M5 9.2l2.6 2.6L13 6.4" stroke="#E9B66B" stroke-width="2" fill="none"/></svg>Vaulted ceilings in select homes</li>
+        <li><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="9" fill="#234237"/><path d="M5 9.2l2.6 2.6L13 6.4" stroke="#E9B66B" stroke-width="2" fill="none"/></svg>Hardwood-style flooring</li>
+        <li><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="9" fill="#234237"/><path d="M5 9.2l2.6 2.6L13 6.4" stroke="#E9B66B" stroke-width="2" fill="none"/></svg>Private balcony or patio</li>
+        <li><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="9" fill="#234237"/><path d="M5 9.2l2.6 2.6L13 6.4" stroke="#E9B66B" stroke-width="2" fill="none"/></svg>Swimming pool and sundeck</li>
+        <li><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="9" fill="#234237"/><path d="M5 9.2l2.6 2.6L13 6.4" stroke="#E9B66B" stroke-width="2" fill="none"/></svg>Fitness center</li>
+        <li><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="9" fill="#234237"/><path d="M5 9.2l2.6 2.6L13 6.4" stroke="#E9B66B" stroke-width="2" fill="none"/></svg>Bark park and dog wash</li>
+      </ul>
+      <a class="btn btn-line" href="#photos">Take a look around</a>
+    </div>
+  </div>
+</section>
+
+<section class="plans" id="floorplans">
+  <div class="wrap">
+    <div class="head">
+      <h2>Four floor plans, one for every stage of life</h2>
+      <p class="lede">Every layout comes with an open living and dining area, a full kitchen and a private balcony or patio. Select a plan to see it in 3D.</p>
+    </div>
+    <div class="fp">
+      <div class="fp-list" role="tablist" aria-label="Floor plans" id="fpList"></div>
+      <div class="fp-stage" role="tabpanel" id="fpStage" aria-live="polite">
+        <div class="fp-top">
+          <div><h3 id="fpName"></h3></div>
+          <span class="avail" id="fpAvail"><i></i><span></span></span>
+        </div>
+        <div class="fp-img"><img id="fpImg" alt=""></div>
+        <dl class="fp-specs">
+          <div><dt>Bedrooms</dt><dd id="fpBd"></dd></div>
+          <div><dt>Bathrooms</dt><dd id="fpBa"></dd></div>
+          <div><dt>Square feet</dt><dd id="fpSq"></dd></div>
+          <div><dt>Monthly rent</dt><dd id="fpRent"></dd></div>
+          <a class="btn btn-dark" id="fpCta" href="#visit">Tour this plan</a>
+          <div class="size"><span>Size vs. largest plan</span><span class="bar"><i id="fpBar"></i></span></div>
+        </dl>
+      </div>
+    </div>
+    <p class="fp-note">Deposit is $400 on every plan. Rent and availability change daily; finishes vary by unit and 3D plans are artistic representations.</p>
+  </div>
+</section>
+
+<section class="gallery" id="photos">
+  <div class="wrap">
+    <div class="head">
+      <h2>Take a look around</h2>
+      <div class="filters" role="group" aria-label="Filter photos" id="filters">
+        <button aria-pressed="true" data-f="all">All</button>
+        <button aria-pressed="false" data-f="grounds">Grounds</button>
+        <button aria-pressed="false" data-f="amenities">Amenities</button>
+        <button aria-pressed="false" data-f="inside">Inside</button>
+        <button aria-pressed="false" data-f="evening">Evenings</button>
+      </div>
+    </div>
+    <div class="grid" id="grid">
+      <button class="w8" data-c="evening"><img data-k="eve_bldg" src="assets/eve_bldg.webp" alt="Two-story building at twilight with warm lit windows" loading="lazy"><figcaption>Evening at Portage Pointe</figcaption></button>
+      <button class="w4" data-c="grounds"><img data-k="sign" src="assets/sign.webp" alt="Portage Pointe Apartment Homes entrance sign surrounded by evergreens" loading="lazy"><figcaption>Front entrance</figcaption></button>
+      <button class="w4" data-c="amenities"><img data-k="gym" src="assets/gym.webp" alt="Fitness center with treadmills and ellipticals" loading="lazy"><figcaption>Fitness center</figcaption></button>
+      <button class="w4" data-c="inside"><img data-k="kitchen" src="assets/kitchen.webp" alt="Galley kitchen with granite counters and wood cabinets" loading="lazy"><figcaption>Kitchen</figcaption></button>
+      <button class="w4" data-c="amenities"><img data-k="garden" src="assets/garden.webp" alt="Raised garden beds in a fenced community garden" loading="lazy"><figcaption>Community garden</figcaption></button>
+      <button class="w6" data-c="amenities"><img data-k="lounge" src="assets/lounge.webp" alt="Pool deck lounge chairs beside flowering shrubs" loading="lazy"><figcaption>Pool deck</figcaption></button>
+      <button class="w6" data-c="evening"><img data-k="eve_steps" src="assets/eve_steps.webp" alt="Landscaped steps leading to the clubhouse at sunset" loading="lazy"><figcaption>Clubhouse at sunset</figcaption></button>
+      <button class="w3" data-c="grounds"><img data-k="flag" src="assets/flag.webp" alt="Entry circle with flagpole in front of apartment buildings" loading="lazy"><figcaption>Grounds</figcaption></button>
+      <button class="w3" data-c="amenities"><img data-k="pavilion" src="assets/pavilion.webp" alt="Covered picnic pavilion with tables" loading="lazy"><figcaption>Picnic pavilion</figcaption></button>
+      <button class="w3" data-c="inside"><img data-k="bed" src="assets/bed.webp" alt="Bedroom styled with green bedding and natural wood" loading="lazy"><figcaption>Bedroom</figcaption></button>
+      <button class="w3" data-c="amenities"><img data-k="play" src="assets/play.webp" alt="Playground with slides" loading="lazy"><figcaption>Playground</figcaption></button>
+      <button class="w4" data-c="grounds"><img data-k="bldg" src="assets/bldg.webp" alt="Three-story apartment building with balconies and lawn" loading="lazy"><figcaption>Balconies</figcaption></button>
+      <button class="w4" data-c="inside"><img data-k="biz" src="assets/biz.webp" alt="Business center workstations" loading="lazy"><figcaption>Business center</figcaption></button>
+      <button class="w4" data-c="evening"><img data-k="eve_club" src="assets/eve_club.webp" alt="Clubhouse leasing office sign at dusk" loading="lazy"><figcaption>Leasing office</figcaption></button>
+      <button class="w6" data-c="amenities"><img data-k="gazebo" src="assets/gazebo.webp" alt="Gazebo on a wide green lawn" loading="lazy"><figcaption>Gazebo lawn</figcaption></button>
+      <button class="w6" data-c="evening"><img data-k="sunset" src="assets/sunset.webp" alt="Orange sunset over apartment buildings and pine trees" loading="lazy"><figcaption>Sunset</figcaption></button>
+      <button class="w3" data-c="amenities"><img data-k="hoop" src="assets/hoop.webp" alt="Outdoor basketball court surrounded by trees" loading="lazy"><figcaption>Basketball court</figcaption></button>
+      <button class="w3" data-c="grounds"><img data-k="walk" src="assets/walk.webp" alt="Two-story brick and siding building with front walkway" loading="lazy"><figcaption>Walk-up buildings</figcaption></button>
+      <button class="w3" data-c="inside"><img data-k="laundry" src="assets/laundry.webp" alt="Laundry room with washer and dryer" loading="lazy"><figcaption>Laundry</figcaption></button>
+      <button class="w3" data-c="grounds"><img data-k="garage" src="assets/garage.webp" alt="Row of detached garages" loading="lazy"><figcaption>Garages</figcaption></button>
+    </div>
+  </div>
+</section>
+
+<section id="amenities">
+  <div class="wrap amen-grid">
+    <figure class="amen-photo" style="margin:0"><img id="amImg" data-k="pool" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-dup="pool" alt="Swimming pool"><figcaption id="amCap">Swimming pool</figcaption></figure>
+    <div>
+      <h2 style="margin-bottom:22px">Everything you'd leave home for, right here</h2>
+      <p class="lede" style="margin-bottom:40px">Swim, train, garden or get some work done without getting in the car. Tap any amenity to see it.</p>
+      <div class="groups">
+        <h3>Around the community</h3>
+        <ul>
+          <li><button class="on" data-img="pool">Swimming pool and sundeck<span class="dot"></span></button></li>
+          <li><button data-img="hero_in">Clubhouse<span class="dot"></span></button></li>
+          <li><button data-img="gym">Fitness center<span class="dot"></span></button></li>
+          <li><button data-img="biz">Business center<span class="dot"></span></button></li>
+          <li><button data-img="garden">Community garden<span class="dot"></span></button></li>
+          <li><button data-img="pavilion">Picnic pavilion<span class="dot"></span></button></li>
+          <li><button data-img="gazebo">Gazebo<span class="dot"></span></button></li>
+          <li><button data-img="play">Playground<span class="dot"></span></button></li>
+          <li><button data-img="hoop">Basketball court<span class="dot"></span></button></li>
+          <li><button data-img="laundry">Laundry room<span class="dot"></span></button></li>
+          <li><button data-img="garage">Detached garages<span class="dot"></span></button></li>
+        </ul>
+        <h3>In your home</h3>
+        <ul>
+          <li><button data-img="kitchen">Full kitchen<span class="dot"></span></button></li>
+          <li><button data-img="bldg">Private balcony or patio<span class="dot"></span></button></li>
+          <li class="plain">Vaulted ceilings</li>
+          <li class="plain">Hardwood-style flooring</li>
+        </ul>
+        <small>Some features are available in select apartment homes.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="pets">
+  <img data-k="lawn" src="assets/lawn.webp" alt="" loading="lazy">
+  <div class="wrap">
+    <h2>Your dog will like it here too</h2>
+    <p>Pets are welcome upon approval, with plenty of open lawn plus a fenced bark park for off-leash time. Breed restrictions apply, so give us a call with any questions.</p>
+    <ul class="pet-list"><li>Bark park</li><li>Dog run</li><li>Dog wash stations</li><li>Pet waste stations</li></ul>
+  </div>
+</section>
+
+<section class="hood" id="neighborhood">
+  <div class="wrap hood-grid">
+    <div>
+      <h2 style="margin-bottom:22px">Quiet at home, close to everything</h2>
+      <p class="lede">Streetsboro puts you near the highway for the weekday commute and near Northeast Ohio's best outdoor spots for the weekend.</p>
+      <ul class="places" id="places">
+        <li class="place" data-pin="p1" tabindex="0"><span class="k">80</span><div><h3>Ohio Turnpike (I-80)</h3><p>Easy access for trips toward Cleveland, Akron and beyond.</p></div></li>
+        <li class="place" data-pin="p2" tabindex="0"><span class="k">L</span><div><h3>Lake Rockwell</h3><p>A scenic reservoir with nearby trails for walks and rides.</p></div></li>
+        <li class="place" data-pin="p3" tabindex="0"><span class="k">B</span><div><h3>Brandywine Falls</h3><p>The 65-foot waterfall in Cuyahoga Valley National Park.</p></div></li>
+        <li class="place" data-pin="p4" tabindex="0"><span class="k">S</span><div><h3>Shopping and dining</h3><p>Stores, restaurants and entertainment around Streetsboro.</p></div></li>
+      </ul>
+    </div>
+    <div class="map">
+      <svg viewBox="0 0 560 560" role="img" aria-label="Simplified map of Portage Pointe near the Ohio Turnpike, Lake Rockwell and Brandywine Falls. Not to scale.">
+        <rect width="560" height="560" fill="#E6EBE7"/>
+        <g fill="none" stroke="#D4DCD6" stroke-width="1.2"><path d="M0 90 C140 70 300 120 560 80"/><path d="M0 160 C150 140 320 190 560 150"/><path d="M0 400 C150 380 340 430 560 390"/><path d="M0 480 C170 460 320 500 560 470"/></g>
+        <path d="M40 30 C80 120 70 210 100 280 C130 350 90 430 130 530" stroke="#A9C8D4" stroke-width="12" fill="none" stroke-linecap="round"/>
+        <path d="M60 150 C40 210 80 250 70 320 L150 320 C160 240 130 190 150 150Z" fill="#C7D7C8"/>
+        <path d="M0 225 C160 215 320 255 560 235" stroke="#E9B66B" stroke-width="14" fill="none"/>
+        <path d="M0 225 C160 215 320 255 560 235" stroke="#fff" stroke-width="2" stroke-dasharray="10 10" fill="none"/>
+        <path d="M325 0 C335 130 315 320 355 560" stroke="#FBFCFB" stroke-width="9" fill="none"/>
+        <path d="M385 350 C430 318 505 340 516 385 C527 438 462 462 420 440 C388 424 365 386 385 350Z" fill="#94BBCB"/>
+        <g class="pin" id="p1"><circle cx="245" cy="230" r="16" fill="#234237"/><text x="245" y="235" text-anchor="middle" font-family="Figtree" font-weight="700" font-size="12" fill="#fff">80</text></g>
+        <g class="pin" id="p2"><circle cx="450" cy="392" r="16" fill="#234237"/><text x="450" y="397" text-anchor="middle" font-family="Figtree" font-weight="700" font-size="12" fill="#fff">L</text></g>
+        <g class="pin" id="p3"><circle cx="108" cy="236" r="16" fill="#234237"/><text x="108" y="241" text-anchor="middle" font-family="Figtree" font-weight="700" font-size="12" fill="#fff">B</text></g>
+        <g class="pin" id="p4"><circle cx="380" cy="128" r="16" fill="#234237"/><text x="380" y="133" text-anchor="middle" font-family="Figtree" font-weight="700" font-size="12" fill="#fff">S</text></g>
+        <circle cx="340" cy="292" r="34" fill="#E9B66B" opacity=".3"/>
+        <circle cx="340" cy="292" r="14" fill="#E9B66B" stroke="#fff" stroke-width="4"/>
+        <rect x="262" y="320" width="156" height="34" rx="17" fill="#1D2824"/><text x="340" y="342" text-anchor="middle" font-family="Figtree" font-weight="600" font-size="14" fill="#fff">Portage Pointe</text>
+        <text x="540" y="545" text-anchor="end" font-family="Figtree" font-size="11" fill="#5A6660">Not to scale</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="tour" id="visit">
+  <img data-k="eve_club" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-dup="eve_club" alt="" loading="lazy">
+  <div class="wrap">
+    <div>
+      <h2 style="margin-bottom:22px">Come see it in person</h2>
+      <p class="lede">Pick a day and the leasing team will confirm your tour and walk you through what's available.</p>
+      <div class="info">
+        <div><h3>Call or text</h3><a href="tel:+13306262388">330-626-2388</a><div style="font-size:.88rem;opacity:.7;margin-top:4px">TTY 711</div></div>
+        <div><h3>Visit</h3><address>9001 Portage Pointe Dr<br>Streetsboro, OH 44241</address></div>
+        <div><h3>Office hours</h3>
+          <ul class="hours" id="hours">
+            <li data-d="1,2,3,4,5"><span>Mon–Fri</span><span>9 AM–5 PM</span></li>
+            <li data-d="6"><span>Saturday</span><span>9 AM–1 PM</span></li>
+            <li data-d="0"><span>Sunday</span><span>Closed</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <form id="tourForm" novalidate>
+      <h3>Schedule a tour</h3>
+      <div class="field"><label for="fn">Full name</label><input id="fn" autocomplete="name" required><span class="err" id="e-fn"></span></div>
+      <div class="field"><label for="ph">Phone</label><input id="ph" type="tel" autocomplete="tel" required><span class="err" id="e-ph"></span></div>
+      <div class="field full"><label for="em">Email</label><input id="em" type="email" autocomplete="email" required><span class="err" id="e-em"></span></div>
+      <fieldset>
+        <legend>Floor plan</legend>
+        <div class="seg" id="seg">
+          <input type="radio" name="plan" id="r0" value="1x1"><label for="r0">1 bed</label>
+          <input type="radio" name="plan" id="r1" value="2x1" checked><label for="r1">2 bed, 1 bath</label>
+          <input type="radio" name="plan" id="r2" value="2x2"><label for="r2">2 bed, 2 bath</label>
+          <input type="radio" name="plan" id="r3" value="3x2"><label for="r3">3 bed</label>
+        </div>
+      </fieldset>
+      <div class="field"><label for="dt">Preferred date</label><input id="dt" type="date"></div>
+      <div class="field"><label for="mv">Move-in timing</label><select id="mv"><option>Within 30 days</option><option>1–2 months</option><option>3+ months</option><option>Just looking</option></select></div>
+      <div class="field full"><label for="nt">Questions or notes (optional)</label><textarea id="nt" rows="3" placeholder="Pets, garage, accessibility needs"></textarea></div>
+      <button class="btn btn-dark" type="submit">Request tour</button>
+      <div class="done" id="done" role="status" tabindex="-1"><h4>Tour requested</h4><p>Thanks, <span id="dn"></span>. The leasing office will call or email to confirm your time.</p></div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <div class="f-brand">Portage Pointe</div>
+        <p>9001 Portage Pointe Drive<br>Streetsboro, OH 44241<br><a href="tel:+13306262388">330-626-2388</a>, TTY 711</p>
+        <p>Professionally managed by JKG Properties</p>
+      </div>
+      <div><h4>Explore</h4><ul><li><a href="#floorplans">Floor plans</a></li><li><a href="#photos">Photos</a></li><li><a href="#amenities">Amenities</a></li><li><a href="#pets">Pets</a></li><li><a href="#neighborhood">Neighborhood</a></li></ul></div>
+      <div><h4>Plan a visit</h4><ul><li><a href="#visit">Schedule a tour</a></li><li><a href="#">Community tour</a></li><li><a href="#">E-brochure</a></li><li><a href="#">Specials</a></li><li><a href="#">Refer a friend</a></li></ul></div>
+      <div><h4>Residents</h4><ul><li><a href="#">Resident portal</a></li><li><a href="#">Pay rent</a></li><li><a href="#">FAQ</a></li><li><a href="#">Accessibility</a></li></ul></div>
+    </div>
+    <div class="legal"><span>Equal Housing Opportunity</span><span><a href="#">Web accessibility</a><a href="#">Cookie policy</a><a href="#">Disclaimer</a></span></div>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar"><a class="btn call" href="tel:+13306262388">Call</a><a class="btn btn-glow" href="#visit">Schedule a tour</a></div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="x" aria-label="Close">✕</button>
+  <button class="pv" aria-label="Previous photo">‹</button>
+  <img id="lbImg" alt="">
+  <button class="nx" aria-label="Next photo">›</button>
+  <p id="lbCap"></p>
+</div>
+
+<script>document.querySelectorAll("img[data-dup]").forEach(i=>{const o=document.querySelector('img[data-k="'+i.dataset.dup+'"]:not([data-dup])');if(o)i.src=o.src});</script>
+<button class="pv-btn" id="pvBtn" aria-haspopup="dialog"><svg width="14" height="20" viewBox="0 0 14 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="1" y="1" width="12" height="18" rx="3"/><path d="M5.5 16h3"/></svg>Phone preview</button>
+<div class="pvw" id="pv" role="dialog" aria-modal="true" aria-label="Phone preview">
+  <button class="pv-x" id="pvX" aria-label="Close phone preview">✕</button>
+  <div class="handset"><iframe id="pvFrame" title="Site on a phone-sized screen"></iframe></div>
+  <div class="pv-side"><h2>On a phone</h2><p>This is the same page at iPhone width (390px). Scroll inside the phone, open the menu and try the floor plans.</p><button class="btn btn-glow" id="pvClose">Back to desktop</button></div>
+</div>
+<script>
+const IMG=new Proxy({},{get:(_,k)=>document.querySelector('img[data-k="'+k+'"]').src});
+const PLANS=[
+ {name:"One bedroom",bd:1,ba:1,sq:820,rent:"$1,185–$1,215",avail:"3 available",wait:false,img:"assets/fp-1bed.webp"},
+ {name:"Two bedroom, one bath",bd:2,ba:1,sq:1020,rent:"$1,285–$1,315",avail:"6 available",wait:false,img:"assets/fp-2bed-1bath.webp",feat:true},
+ {name:"Two bedroom, two bath",bd:2,ba:2,sq:1150,rent:"Call for pricing",avail:"Waitlist",wait:true,img:"assets/fp-2bed-2bath.webp"},
+ {name:"Three bedroom, two bath",bd:3,ba:2,sq:1255,rent:"Call for pricing",avail:"Waitlist",wait:true,img:"assets/fp-3bed-2bath.webp"}
+];
+const $=s=>document.querySelector(s);
+
+// header
+const hdr=$("#top"),mbar=$('#mbar');
+const onScroll=()=>{const y=scrollY;hdr.classList.toggle('solid',y>innerHeight*.75);mbar.classList.toggle('show',y>innerHeight*.6)};
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+const mb=$('#menuBtn'),nav=$('#nav');
+mb.onclick=()=>{const o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o);mb.textContent=o?'Close':'Menu';if(o)hdr.classList.add('solid');else onScroll()};
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');mb.setAttribute('aria-expanded',false);mb.textContent='Menu'}));
+
+// hero video (single clip)
+const vid=$('#flyVid'),tourBtn=$('#tourBtn');
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+let playing=!reduce;
+vid.muted=true;vid.defaultMuted=true;
+vid.src='assets/flyover.mp4';
+function setPlaying(p){playing=p;$('#icoPause').style.display=p?'':'none';$('#icoPlay').style.display=p?'none':'';tourBtn.setAttribute('aria-label',(p?'Pause':'Play')+' video');p?vid.play().catch(()=>{}):vid.pause()}
+tourBtn.onclick=()=>setPlaying(!playing);
+vid.addEventListener('canplay',()=>{if(playing)vid.play().catch(()=>{})});
+// if autoplay is blocked, start on first interaction anywhere
+addEventListener('pointerdown',()=>{if(playing&&vid.paused)vid.play().catch(()=>{})},{once:true});
+setPlaying(playing);
+
+// floor plans
+const list=$('#fpList'),fpImg=$('#fpImg');let cur=-1;
+PLANS.forEach((p,i)=>{const t=document.createElement('button');t.className='fp-tab';t.role='tab';t.id='tab'+i;t.setAttribute('aria-controls','fpStage');
+ t.innerHTML=`<span class="nm">${p.name}</span><span class="rent">${p.wait?'':'from '+p.rent.split('–')[0]}</span><span class="sub">${p.bd} bd, ${p.ba} ba, ${p.sq.toLocaleString()} sq ft</span><span class="tag">${p.avail}</span>`;
+ t.onclick=()=>{show(i);t.scrollIntoView({block:'nearest',inline:'nearest',behavior:'smooth'})};
+ t.onkeydown=e=>{if(e.key==='ArrowDown'||e.key==='ArrowRight'){e.preventDefault();show((i+1)%4,true)}if(e.key==='ArrowUp'||e.key==='ArrowLeft'){e.preventDefault();show((i+3)%4,true)}};
+ list.appendChild(t)});
+function show(i,focus){if(i===cur)return;cur=i;const p=PLANS[i];
+ list.querySelectorAll('.fp-tab').forEach((t,j)=>{t.setAttribute('aria-selected',j===i);t.tabIndex=j===i?0:-1});
+ if(focus)$('#tab'+i).focus();
+ $('#fpStage').setAttribute('aria-labelledby','tab'+i);
+ fpImg.classList.add('swap');setTimeout(()=>{fpImg.src=p.img;fpImg.alt=`3D floor plan of the ${p.name.toLowerCase()} layout`;fpImg.onload=()=>fpImg.classList.remove('swap')},180);
+ $('#fpName').textContent=p.name;$('#fpBd').textContent=p.bd;$('#fpBa').textContent=p.ba;$('#fpSq').textContent=p.sq.toLocaleString();$('#fpRent').textContent=p.rent;
+ const av=$('#fpAvail');av.classList.toggle('wait',p.wait);av.querySelector('span').textContent=p.avail;
+ $('#fpCta').textContent=p.wait?'Join the waitlist':'Tour this plan';$('#fpCta').dataset.i=i;
+ $('#fpBar').style.width=(p.sq/1255*100)+'%'}
+$('#fpCta').addEventListener('click',e=>{$('#r'+e.currentTarget.dataset.i).checked=true});
+show(1);
+
+// gallery filter + lightbox
+const grid=$('#grid'),items=[...grid.querySelectorAll('button')];
+$('#filters').querySelectorAll('button').forEach(b=>b.onclick=()=>{$('#filters').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));items.forEach(it=>it.hidden=!(b.dataset.f==='all'||it.dataset.c===b.dataset.f))});
+const lb=$('#lb'),lbImg=$('#lbImg'),lbCap=$('#lbCap');let li=0,lastFocus;
+const vis=()=>items.filter(i=>!i.hidden);
+function openLb(n){const v=vis();li=(n+v.length)%v.length;const im=v[li].querySelector('img');lbImg.src=im.src;lbImg.alt=im.alt;lbCap.textContent=v[li].querySelector('figcaption').textContent;if(!lb.classList.contains('open')){lastFocus=document.activeElement;lb.classList.add('open');document.body.style.overflow='hidden';lb.querySelector('.x').focus()}}
+function closeLb(){lb.classList.remove('open');document.body.style.overflow='';lastFocus&&lastFocus.focus()}
+items.forEach(it=>it.onclick=()=>openLb(vis().indexOf(it)));
+lb.querySelector('.x').onclick=closeLb;lb.querySelector('.pv').onclick=()=>openLb(li-1);lb.querySelector('.nx').onclick=()=>openLb(li+1);
+lb.onclick=e=>{if(e.target===lb)closeLb()};
+addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowRight')openLb(li+1);if(e.key==='ArrowLeft')openLb(li-1);
+ if(e.key==='Tab'){const f=[...lb.querySelectorAll('button')];const i=f.indexOf(document.activeElement);e.preventDefault();f[(i+(e.shiftKey?-1:1)+f.length)%f.length].focus()}});
+
+// amenities
+const amImg=$('#amImg'),amCap=$('#amCap');
+document.querySelectorAll('.groups button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.groups button').forEach(x=>x.classList.toggle('on',x===b));amImg.style.opacity=0;setTimeout(()=>{amImg.src=IMG[b.dataset.img];amImg.alt=b.textContent.trim();amCap.textContent=b.textContent.trim();amImg.style.opacity=1},220)});
+
+// map
+document.querySelectorAll('.place').forEach(li=>{const pin=document.getElementById(li.dataset.pin);const on=()=>{li.classList.add('on');pin.classList.add('on')},off=()=>{li.classList.remove('on');pin.classList.remove('on')};li.onmouseenter=on;li.onmouseleave=off;li.onfocus=on;li.onblur=off});
+
+// today's hours
+const d=new Date().getDay();document.querySelectorAll('#hours li').forEach(l=>{if(l.dataset.d.split(',').includes(String(d)))l.classList.add('today')});
+
+// form
+$('#tourForm').addEventListener('submit',e=>{e.preventDefault();
+ const chk=[['fn','e-fn',v=>v.trim()?'':'Enter your name.'],['ph','e-ph',v=>v.replace(/\D/g,'').length>=10?'':'Enter a 10-digit phone number.'],['em','e-em',v=>/^\S+@\S+\.\S+$/.test(v)?'':'Enter an email like you@example.com.']];
+ let first=null;chk.forEach(([i,er,fn])=>{const el=document.getElementById(i),m=fn(el.value);document.getElementById(er).textContent=m;el.setAttribute('aria-invalid',!!m);if(m&&!first)first=el});
+ if(first){first.focus();return}
+ $('#dn').textContent=$('#fn').value.trim().split(' ')[0];const dn=$('#done');dn.style.display='block';dn.focus();
+ const b=e.target.querySelector('[type=submit]');b.textContent='Tour requested';b.disabled=true});
+
+// phone preview
+
+const pv=$('#pv'),pvF=$('#pvFrame');let pvLoaded=false;
+function openPv(){if(!pvLoaded){const doc=document.documentElement.cloneNode(true);doc.querySelectorAll('.pvw,.pv-btn').forEach(e=>e.remove());doc.querySelectorAll('.lb.open').forEach(e=>e.classList.remove('open'));doc.setAttribute('class','in-frame');doc.querySelector('body').removeAttribute('style');doc.querySelector('#top').classList.remove('solid');doc.querySelector('#nav').classList.remove('open');doc.querySelector('#flyVid').removeAttribute('src');pvF.srcdoc='<!doctype html>'+doc.outerHTML;pvLoaded=true}pv.classList.add('open');document.body.style.overflow='hidden';$('#pvClose').focus()}
+function closePv(){pv.classList.remove('open');document.body.style.overflow='';$('#pvBtn').focus()}
+if(pv){$('#pvBtn').onclick=openPv;$('#pvClose').onclick=closePv;$('#pvX').onclick=closePv;pv.onclick=e=>{if(e.target===pv)closePv()}}
+addEventListener('keydown',e=>{if(pv&&e.key==='Escape'&&pv.classList.contains('open'))closePv()});
+</script>
+</body>
+</html>
